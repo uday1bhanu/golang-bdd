@@ -3,7 +3,7 @@ package books
 type Book struct {
 	Title  string
 	Author string
-	Pages  string
+	Pages  int
 }
 
 func (b *Book) CategoryByLength() string {

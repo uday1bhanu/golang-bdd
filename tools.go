@@ -1,4 +1,4 @@
-package main
+package golang_bdd
 
 import (
 	_ "github.com/onsi/ginkgo"

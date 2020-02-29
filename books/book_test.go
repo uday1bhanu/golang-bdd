@@ -3,8 +3,6 @@ package books
 import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-
-	. "github.com/uday1bhanu/golang-bdd/books"
 )
 
 var _ = Describe("Book", func() {

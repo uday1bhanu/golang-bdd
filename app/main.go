@@ -3,17 +3,17 @@ package main
 import (
 	"log"
 
-	. "github.com/uday1bhanu/golang-bdd/books"
+	b "github.com/uday1bhanu/golang-bdd/books"
 )
 
 func main() {
-	longBook := Book{
+	longBook := b.Book{
 		Title:  "Les Miserables",
 		Author: "Victor Hugo",
 		Pages:  1488,
 	}
 
-	shortBook := Book{
+	shortBook := b.Book{
 		Title:  "Fox In Socks",
 		Author: "Dr. Seuss",
 		Pages:  24,
