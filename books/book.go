@@ -1,9 +1,18 @@
 package books
 
+import (
+	"encoding/json"
+	"strings"
+)
+
 type Book struct {
-	Title  string
-	Author string
-	Pages  int
+	Title  string `json:"title"`
+	Author string `json:"author"`
+	Pages  int    `json:"pages"`
+}
+
+func (b *Book) AuthorLastName() string {
+	return strings.Fields(b.Author)[1]
 }
 
 func (b *Book) CategoryByLength() string {
@@ -12,4 +21,11 @@ func (b *Book) CategoryByLength() string {
 	} else {
 		return "SHORT STORY"
 	}
+}
+
+func NewBookFromJSON(book []byte) (Book, error) {
+	var r Book
+
+	err := json.Unmarshal(book, &r)
+	return r, err
 }
